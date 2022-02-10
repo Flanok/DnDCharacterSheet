@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp"
+    android:background="@color/primary"
+    tools:background="@color/primary"
+    tools:context="com.example.caleb.dndcharactersheet.MainActivity" >
+
+    <Spinner
+        android:id="@+id/spinRace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/select_box"
+        android:entries="@array/raceNames"
+        android:gravity="center_horizontal"
+        android:popupBackground="@color/third"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/spinClasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinRace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/select_box"
+        android:entries="@array/classNames"
+        android:gravity="center_horizontal"
+        android:popupBackground="@color/third"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/spinLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinClasses"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/select_box"
+        android:entries="@array/levelChoice"
+        android:gravity="center_horizontal"
+        android:popupBackground="@color/third"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/generate_box"
+        android:fontFamily="serif"
+        android:onClick="onClickGeneratePDF"
+        android:text="@string/generateButton"
+        android:textAlignment="center"
+        android:textColor="@color/third"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/header"
+        android:fontFamily="serif"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/accent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/appTitle"
+        android:background="@color/third"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/firstLine" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/firstLine"
+        android:background="@color/third"
+        android:id="@+id/secondLine" />
+
+</RelativeLayout>
